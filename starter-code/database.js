@@ -63,7 +63,7 @@ class Database {
       if (error){
         callback(error);
       } else {
-        //  LAB 3        
+        //  LAB 3
         database.collection('users').deleteOne(database.collection('users').firstName, callback)
         //callback('Error deleting user');
       }
@@ -75,12 +75,9 @@ class Database {
       if (error){
         callback(error);
       } else {
-        // LAB 4
-        // Implement the query to insert a product
-        // product is the document to insert
-        // remeber once it's finish to comment callback('Error inserting product');
-
-        callback('Error inserting product');
+        // LAB 4        
+        database.collection('products').insertOne(product, callback);
+        //callback('Error inserting product');
       }
     });
   }
