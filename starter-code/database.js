@@ -52,10 +52,8 @@ class Database {
         callback(error);
       } else {
         //  LAB 2
-        // Implement the query to insert a user
-        // remeber once it's finish to comment callback('Error listing users');
-
-        callback('Error listing users');
+        database.collection('users').find().toArray(callback);
+        //callback('Error listing users');
       }
     });
   }
@@ -69,8 +67,8 @@ class Database {
         // Implement the query to delete a user
         // firstName is the name of user that we want to delete
         // remeber once it's finish to comment callback('Error deleting user');
-
-        callback('Error deleting user');
+        database.collection('users').delete(user, callback);
+        //callback('Error deleting user');
       }
     });
   }
