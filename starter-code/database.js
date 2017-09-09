@@ -100,11 +100,8 @@ class Database {
         callback(error);
       } else {
         // LAB 6
-        // Implement the query to delete a product
-        // productName is the name of the producto to delete
-        // remeber once it's finish to comment callback('Error deleting product');
-
-        callback('Error deleting product');
+        database.collection('products').deleteOne(database.collection('products').name, callback)
+        //callback('Error deleting product');
       }
     });
   }
