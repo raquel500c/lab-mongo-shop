@@ -63,11 +63,8 @@ class Database {
       if (error){
         callback(error);
       } else {
-        //  LAB 3
-        // Implement the query to delete a user
-        // firstName is the name of user that we want to delete
-        // remeber once it's finish to comment callback('Error deleting user');
-        database.collection('users').delete(user, callback);
+        //  LAB 3        
+        database.collection('users').deleteOne(database.collection('users').firstName, callback)
         //callback('Error deleting user');
       }
     });
