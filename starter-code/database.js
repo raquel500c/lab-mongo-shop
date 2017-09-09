@@ -75,7 +75,7 @@ class Database {
       if (error){
         callback(error);
       } else {
-        // LAB 4        
+        // LAB 4
         database.collection('products').insertOne(product, callback);
         //callback('Error inserting product');
       }
@@ -88,10 +88,8 @@ class Database {
         callback(error);
       } else {
         // LAB 5
-        // Implement the query to list all products
-        // remeber once it's finish to comment callback('Error listing products');
-
-        callback('Error listing products');
+        database.collection('products').find().toArray(callback);
+        //callback('Error listing products');
       }
     });
   }
